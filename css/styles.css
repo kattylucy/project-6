@@ -6,7 +6,7 @@
 :root {
   --color-win: #78CF82;
   --color-lose: #D94545;
-  --color-start: #5b85b7;
+  --color-start: #5779a1;
   --color-neutral: #445069;
   --color-neutral-light: #D2D2D2;
   --color-keys: #37474F;
@@ -20,6 +20,11 @@
 
 * {
   box-sizing: border-box;
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
 body {
@@ -37,7 +42,7 @@ li, ol, ul {
 h2 {
   margin: 0;
   text-transform: uppercase;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Catamaran', sans-serif;
   font-size: 90px;
   margin: 0;
 }
@@ -114,7 +119,7 @@ button {
 .btn__reset {
   padding: 20px;
   margin: 50px auto;
-  background: #FFFFFF;
+  background: rgb(241, 240, 239);
   border-radius: 5px;
   font-size: var(--font-size-medium);
   font-family: 'Open Sans Condensed', sans-serif;
@@ -124,7 +129,7 @@ button {
 .winLose {
   margin: 0;
   text-transform: uppercase;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Catamaran', sans-serif;
   font-size: var(--font-size-large);
   display: flex;
   justify-content: center;

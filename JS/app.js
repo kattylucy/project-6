@@ -10,12 +10,7 @@ let classShow = document.getElementsByClassName('letter show');
 let classLetter = document.getElementsByClassName('letter');
 let winLose = overlay.querySelector('.winLose');
 
-
 let missed = [0];
-
-
-
-
 
 const phrases = [
     'tacos are from mexico',
@@ -133,6 +128,10 @@ function checkwin(){
         winLose.textContent = "you won";
         overlay.style.zIndex = "2";
 
+        startButton.addEventListener('click', () => {
+            reload();
+         });
+
         
 
      } else if(missed === 5){
@@ -141,13 +140,22 @@ function checkwin(){
          overlay.style.display = 'flex';
          winLose.style.display = "flex";
          winLose.textContent = "Sorry, you lose!";
-         tryAgain();
-        }   
+
+         startButton.addEventListener('click', () => {
+            reload();
+         });
  }
+}
 
 
 
 
+// reload game to start
+
+function reload (){
+        window.location.reload();
+     
+}
 
 
 
